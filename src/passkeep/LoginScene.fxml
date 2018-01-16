@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" focusTraversable="true" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="920.0" style="-fx-background-color: rgb(47.0, 52.0, 57.0);" vgap="10" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="269.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="248.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="210.0" minHeight="10.0" prefHeight="159.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="159.0" minHeight="0.0" prefHeight="55.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="67.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="127.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <PasswordField fx:id="masterPass" alignment="CENTER" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" onAction="#handleMasterPassword" prefHeight="34.0" prefWidth="500.0" promptText="Enter Master Password . . ." styleClass="text-area" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </PasswordField>
+      <Separator focusTraversable="false" prefWidth="200.0" valignment="TOP" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <effect>
+            <Shadow height="13.93" radius="7.51" width="18.11" />
+         </effect>
+      </Separator>
+      <Separator focusTraversable="false" layoutX="213.0" layoutY="232.0" prefWidth="200.0" valignment="BOTTOM" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+         <effect>
+            <Shadow height="13.93" radius="7.51" width="18.11" />
+         </effect>
+      </Separator>
+      <Label alignment="CENTER" contentDisplay="TEXT_ONLY" focusTraversable="false" prefHeight="54.0" prefWidth="358.0" text="PassKeep" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c3b384" />
+                  <Stop color="#c3b384" offset="0.0076045627376425855" />
+                  <Stop color="#ff6969" offset="0.3269961977186312" />
+                  <Stop color="#dd1515" offset="0.6045627376425855" />
+                  <Stop color="#655ad7" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="DejaVu Sans ExtraLight" size="72.0" />
+         </font>
+      </Label>
+      <Text fx:id="warning" fill="RED" opacity="0.85" strokeType="OUTSIDE" strokeWidth="0.0" text="Incorrect Password" underline="true" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="DejaVu Sans Bold" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</GridPane>

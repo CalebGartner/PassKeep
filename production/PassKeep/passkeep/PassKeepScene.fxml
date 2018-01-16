@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="920.0" stylesheets="@flatterfx.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <ToolBar styleClass="root" stylesheets="@flatterfx.css">
+         <items>
+            <Button fx:id="addAccount" mnemonicParsing="false" onAction="#handleAddBtn" style="-fx-text-fill: #333333;" text="Add Account">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+            </Button>
+            <Separator focusTraversable="false" orientation="VERTICAL">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </Separator>
+            <Button fx:id="deleteAccount" mnemonicParsing="false" onAction="#handleDeleteBtn" style="-fx-text-fill: #333333;" text="Delete Account">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+            </Button>
+         </items>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ToolBar>
+   </top>
+   <center>
+      <GridPane fx:id="gridPane" hgap="8.0" styleClass="root" vgap="8.0" visible="false" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="10.0" prefWidth="101.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+         <effect>
+            <Glow />
+         </effect>
+         <children>
+            <TextField fx:id="accountTitle" layoutX="141.0" layoutY="187.0" promptText="Enter account title . . ." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="userName" promptText="Enter your username . . ." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="password" layoutX="129.0" layoutY="182.0" promptText="Enter your password . . ." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="url" layoutX="141.0" layoutY="113.0" promptText="Enter account URL . . ." GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextArea fx:id="notes" prefHeight="0.0" prefWidth="472.0" promptText="Enter account notes here . . ." wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.rowSpan="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="2.0" right="2.0" top="18.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Label focusTraversable="false" text="Account:  " textFill="#000000c3" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="DejaVu Sans" size="16.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="18.0" layoutY="112.0" text="Username: " textFill="#000000c3" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="DejaVu Sans" size="16.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="18.0" layoutY="184.0" text="Password: " textFill="#000000c3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="DejaVu Sans" size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+            </Label>
+            <Label focusTraversable="false" layoutX="18.0" layoutY="256.0" text="URL: " textFill="#000000c3" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="DejaVu Sans" size="16.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="18.0" layoutY="256.0" text="Notes: " textFill="#000000c3" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets left="8.0" />
+               </padding>
+               <font>
+                  <Font name="DejaVu Sans" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveChanges" alignment="CENTER" mnemonicParsing="false" onAction="#handleSaveChangesBtn" style="-fx-text-fill: #333333;" text="Save Changes" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <font>
+                  <Font name="DejaVu Sans" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="addToDatabase" alignment="CENTER" layoutX="677.0" layoutY="639.0" mnemonicParsing="false" onAction="#handleAddToDatabaseBtn" prefHeight="32.0" prefWidth="153.0" style="-fx-text-fill: #333333;" text="Add to Database" textAlignment="CENTER" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="DejaVu Sans" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="addCancel" alignment="CENTER" layoutX="163.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleAddCancelBtn" prefHeight="32.0" prefWidth="93.0" style="-fx-text-fill: #333333;" text="Cancel" textAlignment="CENTER" visible="false" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="DejaVu Sans" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <ScrollPane fx:id="sPane" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minViewportHeight="0" minViewportWidth="0" prefHeight="653.0" prefViewportHeight="575.0" prefViewportWidth="236.0" prefWidth="250.0" styleClass="scroll-bar" stylesheets="@flatterfx.css" vbarPolicy="ALWAYS" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <content>
+            <VBox fx:id="accountBox" prefHeight="570.0" prefWidth="236.0" spacing="8.0" />
+         </content>
+      </ScrollPane>
+   </left>
+</BorderPane>
